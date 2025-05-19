@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  computic_web:
+    image: computic_web
+    build: .
+    ports:
+      - 3000
