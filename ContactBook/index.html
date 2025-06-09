@@ -24,9 +24,20 @@
             return response.json();
         })
         .then(function(data){
-            //displayOutput(data);
-            console.log(data);
+            displayOutput(data);
+            //console.log(data);
         })
+    }
+
+    function displayOtput(data){
+        output = "<table>";
+
+            for(a in data){
+                output +=
+                <tr>
+                    <td><img src="${rootPath}controller/uploads/${data[a].avarta}"/></td>
+                    </tr>
+            }
     }
 </script>
 
