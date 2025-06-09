@@ -15,7 +15,11 @@
 
 <script>
     function fetchContacts(){
-        fetch(rootPath + "controller/get-contacts/")
+        fetch(rootPath + "controller/get-contacts/", {
+            headers: {
+                'apiKey': apiKey
+            }
+        })
         .then(function(response){
             return response.json();
         })
