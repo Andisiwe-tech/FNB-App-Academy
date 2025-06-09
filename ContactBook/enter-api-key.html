@@ -28,6 +28,7 @@ function setApiKey(e){
 
     if (data == "1") {
         localStorage.setItem("apiKey", apiKey);
+        window.open("index.html", "_self")
     } else {
         alert(data + "Invalid API key entered!");
     }
