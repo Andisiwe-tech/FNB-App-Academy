@@ -6,6 +6,23 @@ body {
     color: #22223b;
 } 
 
+h2 {
+    font-family: Impact, fantasy;
+    text-align: center;
+    font-size: italic;
+}
+
+h4{
+    font-family: Impact, fantasy;
+    font-size: 20px;
+    font-style: italic;
+    color: cornflowerblue;
+}
+
+p{
+    font-family: Helvetica, sens-serif;
+}
+
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minimax(220px, 1fr));
