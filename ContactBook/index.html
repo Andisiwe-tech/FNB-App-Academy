@@ -16,7 +16,7 @@
     <script>
         //Event Listner for the Refresh button
         document.getElementById("refresh").addEventListner('click', fetchContacts);
-        document.getElementById("addContact").addEventListener('click',addContact);
+        document.getElementById("addContact").addEventListener('click',addContacts);
         //Fetch contacts from the API
         
         function fetchContacts(){
@@ -45,6 +45,7 @@
             output += "</table>";
             document.getElementById("table").innerHTML = output;
         }
+        
         function addContact(){
             window.open("add-contact.html", "_self");
         }
