@@ -32,9 +32,24 @@
         form.append("apiKey", apiKey);
         fetch(roothpath + "conttroller/add-contact", {
           method: "POST",
-          headers: { Accept: "application/json" },
+          headers: { Accept: "application/json, *.*" },
           body: form,
-        });
+        })
+            .then(function (response) {
+                return response.text();
+            })
+            .then(function(data){
+              if(data == "1"){
+                alert("Contact added succesfully!");
+                //Link to the home page
+
+              } else {
+                alert("Error adding contact" + data);
+                //Link to the homepage
+              }
+            })
+
+            }
       }
     </script>
   </body>
