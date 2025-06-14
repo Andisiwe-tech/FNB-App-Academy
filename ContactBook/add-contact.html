@@ -26,18 +26,17 @@
     <script src="config.js"></script>
     <script>
       
-      document.getElementById("submitForm").addEventListener("click", submitForm);
-      document.getElementById("homeLink").addEventListener("click", homeLink);
+      
     
       function submitForm(e) {
         e.preventDefault();
 
-        const form = neewformData(document.querySelector("#editForm"));
-        form.append("apiKey", apiKey);
-        fetch(roothpath + "conttroller/add-contact", {
-          method: "POST",
-          headers: { Accept: "application/json, *.*" },
-          body: form,
+        const form = new formData(document.querySelector('#editForm'));
+        form.append('apiKey', apiKey);
+        fetch(roothpath + 'conttroller/insert-contact', {
+          method: 'POST',
+          headers: { 'Accept': 'application/json, *.*' },
+          body: form
         })
           .then(function (response) {
             return response.text();
@@ -56,9 +55,6 @@
         window.open("index.html", "_self");
       }
 
-      function addContact(){
-        window.open("add-contact.html", "_self");
-      }
     </script>
   </body>
 </html>
