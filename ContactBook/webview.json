@@ -1,0 +1,11 @@
+{
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.showWebview",
+        "tittle": "Show Webview",
+        "category": "Webview Example"
+      }
+    ]
+  }
+}
