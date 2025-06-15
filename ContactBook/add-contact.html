@@ -25,7 +25,7 @@
      <br/>
     <script src="config.js"></script>
     <script>
-      document.getElementById("submitForm").addEventListener('submit', submitForm);
+      document.getElementById("submitForm").addEventListener('click', submitForm);
       document.getElementById("homeLink").addEventListener('click', homeLink);
       
       function submitForm(e) {
@@ -46,10 +46,10 @@
              alert("Contact added succesfully!");
               homeLink();
             } else {
-              alert("Error adding contact" + data);
+              alert(data);
               homeLink();
             }
-          });
+          })
       }
       function homeLink() {
         window.open("index.html", "_self");
