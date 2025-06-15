@@ -23,12 +23,13 @@
       <button id="homeLink" type="button">Home</button>
       </form>
      <br/>
+     
     <script src="config.js"></script>
     <script>
-      document.getElementById("submitForm").addEventListener('submit', submitForm);
+      document.getElementById("submitForm").addEventListener('click', submitForm);
       document.getElementById("homeLink").addEventListener('click', homeLink);
       
-      function submitForm(e) {
+      function submitForm(e){
         e.preventDefault();
 
         const form = new FormData(document.querySelector('#editForm'));
@@ -38,10 +39,10 @@
           headers: { 'Accept': 'application/json, *.*' },
           body: form
         })
-          .then(function (response) {
+          .then(function(response) {
             return response.text();
           })
-          .then(function (data) {
+          .then(function(data) {
             if (data == "1") {
              alert("Contact added succesfully!");
               homeLink();
@@ -49,7 +50,7 @@
               alert("Error adding contact" + data);
               homeLink();
             }
-          });
+          })
       }
       function homeLink() {
         window.open("index.html", "_self");

@@ -20,13 +20,13 @@
         //Fetch contacts from the API
         
         function fetchContacts(){
-         fetch(rootPath + 'controller/get-contacts/')
+         fetch(rootPath + "controller/get-contacts/")
             .then(function(response){
                 return response.json();
             })
             .then(function(data){
             displayOutput(data);
-        });
+        })
      }
 
             function displayOutput(data){
