@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit-Contact</title>
 </head>
-<body>
+<body onload="getContact()">
    <div id="avatarImage"></div> 
     <form id="editForm">
 
@@ -31,6 +31,7 @@
 <script>
 // Get the contact ID from the URL
     var id = getId();
+    document.getElementById("homeLink").addEventListener('click', homeLink);
     console.log("The id is :" + id);
     
     function getId(){
@@ -38,6 +39,22 @@
         var pos = url.search("=");
         var id = url.slice(pos + 1);
         return id;
+    }
+
+     // Fetch contact details using an ID
+     function getContact(){
+        fetch(rootPath + 'controller/get-contact/?id=' + id)
+        .then(function(response){
+            return response.json();
+        })
+        .then(function(data){
+            //display the contact details
+            console.log(data);
+        })
+    }
+
+    function homeLink(){
+        window.open("index.html", "_self");
     }
 </script>
 </body>
