@@ -23,7 +23,7 @@
         <button type="submit" id="submitForm">Submit</button>
 </form>
 <br><br>
-<button id="homeLink" type="button">Home</buttoon>
+<button id="homeLink" type="button">Home</button>
 <button id="EditContact" type="button">Edit</button>
 <button id="deleteContact" type="button">Delete</button>
 
@@ -38,7 +38,7 @@
         var url = window.location.href;
         var pos = url.search("=");
         var id = url.slice(pos + 1);
-        return id;
+        return decodeURIComponent(id);
     }
 
      // Fetch contact details using an ID
