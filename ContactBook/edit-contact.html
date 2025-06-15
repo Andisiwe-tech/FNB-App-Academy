@@ -43,7 +43,13 @@
 
      // Fetch contact details using an ID
      function getContact(){
-        fetch(rootPath + 'controller/get-contact/?id=' + id)
+        console.log("Fetching contact...");
+             fetch(rootPath + 'controller/get-contact/?id=' + id, {
+            headers: {
+                'apiKey': apiKey
+            }
+        })
+       
         .then(function(response){
             return response.json();
         })
@@ -51,6 +57,9 @@
             //display the contact details
             console.log(data);
         })
+        .catch(function(error){
+            console.error("Error fetching contact:", error);
+        });
     }
 
     function homeLink(){
