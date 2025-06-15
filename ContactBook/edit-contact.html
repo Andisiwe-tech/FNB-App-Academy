@@ -28,5 +28,18 @@
 <button id="deleteContact" type="button">Delete</button>
 
 <script src="config.js"></script>
+<script>
+
+    // Get the contact ID from the URL
+    var id = getId();
+    console.log("The id is :" + id);
+    
+    function getId(){
+        var url = window.location.href;
+        var pos = url.search("=");
+        var id = url.slice(pos + 1);
+        return id;
+    }
+</script>
 </body>
 </html>
