@@ -81,6 +81,15 @@
         document.getElementById("avatar").hidden = false;
         document.getElementById("submitForm").hidden = false;
     }
+
+    // Submit the form to update the contact
+    function submitForm(e){
+        e.preventDefault();
+
+        const form = new FormData(document.querySelector("#editForm"));
+        form.append('apiKey', apiKey);
+        form.append('id', id);
+    }
 </script>
 </body>
 </html>
