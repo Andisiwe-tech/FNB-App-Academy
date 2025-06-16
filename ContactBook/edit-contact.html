@@ -31,10 +31,10 @@
 <script>
 // Get the contact ID from the URL
     var id = getId();
-    document.getElementById("homeLink").addEventListener('click', homeLink);
-    document.getElementById("EditContact").addEventListener('click', EditContact);
-    document.getElementById("submitForm").addEventListener('click', submitForm);
-    document.getElementById("deleteContact").addEventListener('click', deleteContact);
+    document.getElementById("homeLink").addEventListener('Home', homeLink);
+    document.getElementById("EditContact").addEventListener('Edit', EditContact);
+    document.getElementById("submitForm").addEventListener('Submit', submitForm);
+    document.getElementById("deleteContact").addEventListener('Delete', deleteContact);
     
     
     function getId(){
@@ -47,7 +47,7 @@
      // Fetch contact details using an ID
      function getContact(){
         
-             fetch(rootPath + 'controller/get-contacts/?id=' + id)
+        fetch(rootPath + 'controller/get-contacts/?id=' + id)
         .then(function(response){
             return response.json();
         })
@@ -80,6 +80,7 @@
         document.getElementById("email").readOnly = false;
         // Show the hidden input and label
         document.getElementById("avatar").hidden = false;
+        document.getElementById("avatarLabel").hidden = false;
         document.getElementById("submitForm").hidden = false;
     }
 
