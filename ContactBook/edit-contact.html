@@ -34,7 +34,7 @@
     document.getElementById("homeLink").addEventListener('click', homeLink);
     document.getElementById("EditContact").addEventListener('click', EditContact);
     document.getElementById("submitForm").addEventListener('click', submitForm);
-    console.log("The id is :" + id);
+    
     
     function getId(){
         var url = window.location.href;
@@ -45,14 +45,14 @@
 
      // Fetch contact details using an ID
      function getContact(){
-        console.log("Fetching contact...");
+        
              fetch(rootPath + 'controller/get-contacts/?id=' + id)
         .then(function(response){
             return response.json();
         })
         .then(function(data){
             displayOutput(data);
-            console.log(data);
+           
         })
     }
 
@@ -71,7 +71,6 @@
     document.getElementById("mobile").value = data[0].mobile;
     document.getElementById("email").value = data[0].email;
     }
-
     // Edit contact function
     function EditContact(){
         document.getElementById("firstname").readOnly = false;
