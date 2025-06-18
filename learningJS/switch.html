@@ -8,24 +8,28 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+<nav>
     <a href="index.html">Variables</a>
     <a href="functions.html">Functions</a>
     <a href="password.html">Password</a>
     <a href="loginForm.html">login form</a>
     <a href="stringsAndNumbers.html">string and Numbers</a>
     <a href="switch.html">switch</a>
-    <label for="weather">What's the weather like?</label>
+</nav>
+    <br><br>
+    <label for="weather" size="25"><em>What's the weather like?</em></label>
     <select id="weather">
         <option value="sunny">Sunny</option>
         <option value="cloudy">Cloudy</option>
         <option value="rainy">Rainy</option>
         <option value="snowy">Snowy</option>
         <option value="windy">Windy</option>
-    </select>
     <br><br>
-    <a href="#" onclick="btnPressed()">Check!!</a>
-    <p id="outputText">Weather advice :</p>
-
+    </select>
+    <button><a href="#" onclick="btnPressed()">Check!!</a></button>
+    <br>
+    <p id="outputText"><strong>Weather advice:</strong></p>
+    
     <script>
         function btnPressed(){
             var weatherSelected = document.getElementById("weather").value;

@@ -8,17 +8,22 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+<nav>    
     <a href="index.html">Variables</a>
     <a href="functions.html">Functions</a>
     <a href="password.html">Password</a>
     <a href="loginForm.html">login form</a>
     <a href="stringsAndNumbers.html">string and Numbers</a>
     <a href="switch.html">switch</a>
-    <p>Welcome, please Log in.</p>
+</nav>
+    <p><strong>Please Log in.</strong></p>
+
     
     <form>
-    <label for="usernameInput">Username:</label><input type="text" id="usernameInput"><br><br>
-    <label for="passwordInput">Password:</label><input type="password" id="passwordInput">
+    <label for="usernameInput">Username</label>    
+    <input type="text" id="usernameInput" placeholder="Enter your username"><br>
+    <label for="passwordInput">Password</label>
+    <input type="password" id="passwordInput" placeholder="Enter your password">
     <p id="message"></p>
     <br><br>
     <a href="#" onclick="verifyUser()">Login</a>
